@@ -15,7 +15,7 @@ int partition(int a[],int l,int h)
   key = a[l];
   i = l + 1;
   j = h;
-
+//bbbbbbbbbbbbbbbb
   while(1)
   {
     while((i < h) && (key >= a[i]))
