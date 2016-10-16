@@ -3,13 +3,16 @@
 // :~$ g++ yoyo.cpp -fopenmp
 // :~$ ./a.out
 
+// For a more detailed explanation on the working of this code, check out the following link ->
+// http://stackoverflow.com/questions/22587033/using-circular-permutations-to-reduce-traveling-salesman-complexity
+
 #include<iostream>
 #include<omp.h>
 using namespace std;
 
 int graph[5][5],cost = 999;
 
-void swap (int *x, int *y)
+void swap (int *x, int *y)  // the sequence of traversing cities will be traversed
 {
     int temp;
     temp = *x;
@@ -17,14 +20,14 @@ void swap (int *x, int *y)
     *y = temp;
 }
 
-void copy_array(int *a, int n)
+void copy_array(int *a, int n)  // got the optimal sequence - now find the optimal cost
 {
     int i, sum = 0;
 
     #pragma omp parallel for
       for(i = 0; i <= n; i++)   // notice the <=
       {
-        sum += graph[a[i % 5]][a[(i + 1) % 5]];
+        sum += graph[a[i % 5]][a[(i + 1) % 5]]; // works similar to a counter
       }
 
     if (cost > sum)
@@ -35,7 +38,7 @@ void permute(int *a, int i, int n)
 {
    int j, k;
 
-   if (i == n)
+   if (i == n)  // found the right permutation - all cities have been covered
    {
      #pragma omp parallel sections
      {
@@ -68,8 +71,7 @@ int main()
         cout<<"\t";
     }
     int i, j;
-    int a[] = {0, 1, 2, 3,4};
-    int c = 0;
+    int a[] = {0, 1, 2, 3,4}; // these are the cities to be traversed
 
    permute(a, 0, 4);
    cout<<"\n\n\t\tminimum cost:"<<cost<<endl;
