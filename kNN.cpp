@@ -144,13 +144,13 @@ cout<<endl<<"The nearest neighbours are - "<<endl;
 for(int i=0;i<knn;i++)
 {
   cout<<"("<<points[i][0]<<","<<points[i][1]<<")"<<endl;
-  if(points[i][3] == 0) // short
+  if(points[i][2] == 0) // short - the 3rd column is the class 
     shortCount++;
 
-  if(points[i][3] == 1) // average
+  if(points[i][2] == 1) // average
     averageCount++;
 
-  if(points[i][3] == 2) // tall
+  if(points[i][2] == 2) // tall
     tallCount++;
 }
 
