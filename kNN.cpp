@@ -108,8 +108,10 @@ int main()
   cin>>y;
 
   for(int i=0;i<20;i++)
-    points[i][3] = sqrt(pow((y - points[i][1]),2) + pow((x - points[i][0]),2));
+    points[i][3] = sqrtf(powf((y - points[i][1]),2) + powf((x - points[i][0]),2));
 
+  // sqrtf and powf are specifically designed for float arithmetic and output huge values
+  // you may want to use double everywhere instead of float
   // now sort the distances and then consider the top 'k' neighbours
   for(int i=0;i<20;i++)   // simple bubble sort
   {
