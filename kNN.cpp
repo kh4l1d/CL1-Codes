@@ -101,7 +101,7 @@ int main()
 
   int knn;
   float x,y;
-  cout<<endl<<"How many neighbours should be considered ?"<<endl;
+  cout<<endl<<"How many neighbours should be considered [for better performance donot enter this in multiples of classes] ?"<<endl; // in our case we have 3 cases tall short and avg so donot enter in multiples of 3 
   cin>>knn;
   cout<<endl<<endl<<"Enter the point (x,y) which you want to classify ?"<<endl;
   cin>>x;
@@ -143,7 +143,7 @@ int tallCount = 0;
 
 cout<<endl<<"The nearest neighbours are - "<<endl;
 
-for(int i=0;i<knn;i++)
+for(int i=1;i<=knn;i++)//points 0,0 was coming in the output eventhought we didnt give it as a point for an input 
 {
   cout<<"("<<points[i][0]<<","<<points[i][1]<<")"<<endl;
   if(points[i][2] == 0) // short - the 3rd column is the class 
