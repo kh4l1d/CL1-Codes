@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-  float points[20][4]; // the distance formula spits out some really big float values
+  float points[50][4]; // resolves stack smashing error - credits to Navin Mutha
   // The first column will have the x co-ordinates
   // The second column will have the y co-ordinates
   // The third column will have the height characteristics - 0 for short, 1 for average, 2 for tall
