@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-  float points[50][4]; // resolves stack smashing error - credits to Navin Mutha
+  float points[20][4]; // this is perfectly fine
   // The first column will have the x co-ordinates
   // The second column will have the y co-ordinates
   // The third column will have the height characteristics - 0 for short, 1 for average, 2 for tall
@@ -113,26 +113,26 @@ int main()
   // sqrtf and powf are specifically designed for float arithmetic and output huge values
   // you may want to use double everywhere instead of float
   // now sort the distances and then consider the top 'k' neighbours
-  for(int i=0;i<20;i++)   // simple bubble sort
+  for(int i=0;i<20;i++)   // corrected bubble sort
   {
-    for(int j=0;j<20;j++)
+    for(int j=1;j<=19;j++)
     {
-      if(points[j][3] > points[j+1][3]) // sorting on the basis of the 'distance' part
+      if(points[j-1][3] > points[j][3]) // sorting on the basis of the 'distance' part
       {
-        float p0 = points[j][0];  // all this needs to be swapped
-        float p1 = points[j][1];
-        float p2 = points[j][2];
-        float p3 = points[j][3];
+        float p0 = points[j-1][0];  // all this needs to be swapped
+        float p1 = points[j-1][1];
+        float p2 = points[j-1][2];
+        float p3 = points[j-1][3];
 
-        points[j][0] = points[j+1][0];
-        points[j][1] = points[j+1][1];
-        points[j][2] = points[j+1][2];
-        points[j][3] = points[j+1][3];
+        points[j-1][0] = points[j][0];
+        points[j-1][1] = points[j][1];
+        points[j-1][2] = points[j][2];
+        points[j-1][3] = points[j][3];
 
-        points[j+1][0] = p0;
-        points[j+1][1] = p1;
-        points[j+1][2] = p2;
-        points[j+1][3] = p3;    // quite neatly done
+        points[j][0] = p0;
+        points[j][1] = p1;
+        points[j][2] = p2;
+        points[j][3] = p3;    // quite neatly done
       }
     }
   }
@@ -143,7 +143,7 @@ int tallCount = 0;
 
 cout<<endl<<"The nearest neighbours are - "<<endl;
 
-for(int i=1;i<=knn;i++)//points 0,0 was coming in the output eventhought we didnt give it as a point for an input 
+for(int i=0;i<knn;i++) // all correct now
 {
   cout<<"("<<points[i][0]<<","<<points[i][1]<<")"<<endl;
   if(points[i][2] == 0) // short - the 3rd column is the class 
