@@ -44,7 +44,7 @@ int bound(Node u,int n,int W,Item arr[])
   }
 
   if(j<n)
-    profitBound = (W - totalWeight) * (arr[j].value/arr[j].weight);
+    profitBound += (W - totalWeight) * (arr[j].value/arr[j].weight); // get remaining fractional value
   return profitBound;
 }
 
