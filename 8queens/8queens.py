@@ -33,6 +33,7 @@ def place(col):
 			board[i][col]=0		#if not placed, then backtrack, i.e it sets to zero and the loop iterates to check for next position
 	return False
 
+# observe the json file and place(1) - the first queen MUST be placed in the first column
 if(place(1)==True):
 	print("solution found")
 else:
