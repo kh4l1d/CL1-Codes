@@ -11,7 +11,7 @@ An attempt to simplify codes as much as possible.
 
 2. It's of the form ->
 
-       wget -O filename.txt link/path/to/filename.txt?raw-true
+       wget -O filename.txt link/path/to/filename.txt?raw=true
 
 3. Although it is worth mentioning that repos should ideally be "git clone"-d like this -> https://www.youtube.com/watch?v=oDUOWC4yib0
 
