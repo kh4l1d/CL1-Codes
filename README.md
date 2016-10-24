@@ -3,9 +3,10 @@ An attempt to simplify codes as much as possible.
 --------------------------------------------------------------------------------------------------------------------------------
 ### Downloading (\*winks at you\*)
 
-1. Say you want to download the Apriori.java file through the terminal, just enter in the following command ->
+1. Say you want to download the Apriori.java file and/or the lexicalAnalyzer.l file (present in the Lexical Analyzer directory) through the terminal, just enter in the following command(s) ->
 
        wget -O Apriori.java https://github.com/kh4l1d/CL1-Codes/Apriori.java?raw=true
+       wget -O lexicalAnalyzer.l https://github.com/kh4l1d/CL1-Codes/Lexical Analyzer/lexicalAnalyzer.l?raw=true
 
 2. It's of the form ->
 
