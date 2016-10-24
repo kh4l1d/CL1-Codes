@@ -1,7 +1,7 @@
 # CL1-Codes
 An attempt to simplify codes as much as possible.
 --------------------------------------------------------------------------------------------------------------------------------
-### Downloading \*winks at you\*
+### Downloading (\*winks at you\*)
 
 1. Say you want to download the Apriori.java file through the terminal, just enter in the following command ->
 
