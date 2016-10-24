@@ -11,13 +11,14 @@ An attempt to simplify codes as much as possible.
 
 4. Make sure that the initial value assigned to cost is huge compared to the costs you assign when there is no existing path between cities. For example, in the above point, we assigned 999 - so make sure your initial cost is something like 9999.
 
+--------------------------------------------------------------------------------------------------------------------------------
 ### kMeans.cpp
 
 1. Make sure the centroid you choose,belongs to one of the points.
 
 2. The end result of the centroids will always be same (provided the points are same of course) as the code runs till hasAchievedPerfectCentroids = true.
 
-
+--------------------------------------------------------------------------------------------------------------------------------
 ### knapsack.cpp
 
 1. Keep in mind, the 0/1 knapsack problem is solved using the branch and bound approach.
@@ -31,7 +32,7 @@ An attempt to simplify codes as much as possible.
        
         bison -d <yacc_file>.y
         flex <lex_file>.l
-        gcc lex.yy.c <yacc_file>.tab.h -lm
+        gcc lex.yy.c <yacc_file>.tab.c -lm
         ./a.out
        
         
@@ -39,7 +40,7 @@ An attempt to simplify codes as much as possible.
 
         yacc -d <yacc_file>.y
         flex <lex_file>.l
-        gcc lex.yy.c <yacc_file>.tab.h -lm
+        gcc lex.yy.c <yacc_file>.tab.c -lm
         ./a.out  
    
         
