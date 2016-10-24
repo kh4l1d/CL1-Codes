@@ -1,6 +1,17 @@
 # CL1-Codes
 An attempt to simplify codes as much as possible.
 --------------------------------------------------------------------------------------------------------------------------------
+### Downloading *winks at you*
+
+Say you want to download the Apriori.java file through the terminal, just enter in the following command ->
+
+wget -O Apriori.java https://github.com/kh4l1d/CL1-Codes/Apriori.java?raw=true
+
+It's of the form ->
+wget -O filename.txt link/path/to/filename.txt?raw-true
+
+Although it is worth mentioning that repos should ideally be "git clone"-d like this -> https://www.youtube.com/watch?v=oDUOWC4yib0
+--------------------------------------------------------------------------------------------------------------------------------
 ### travellingSalesman.cpp
 
 1. Please see the link mentioned in the code to understand what's going on.
