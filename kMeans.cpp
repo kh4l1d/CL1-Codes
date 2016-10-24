@@ -65,7 +65,7 @@ int main()
   {
     oldCentroids[i][0] = centroids[i][0];
     oldCentroids[i][1] = centroids[i][1];
-    oldCentroids[i][2] = centroids[i][2]; // not needed actually
+    oldCentroids[i][2] = centroids[i][2]; // good cpp practice to initialize stuff - coz there's no auto garbage collection
   }
 
 
