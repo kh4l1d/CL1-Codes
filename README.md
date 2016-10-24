@@ -1,19 +1,18 @@
 # CL1-Codes
 An attempt to simplify codes as much as possible.
 --------------------------------------------------------------------------------------------------------------------------------
-### Downloading (\*winks at you\*)
+### Downloading :wink:
 
-1. Say you want to download the Apriori.java file and/or the lexicalAnalyzer.l file (present in the Lexical Analyzer directory) through the terminal, just enter in the following command(s) ->
+1. Say you want to download the Travelling Salesman cpp file through the terminal, just enter in the following command: 
 
-       wget -O Apriori.java https://github.com/kh4l1d/CL1-Codes/Apriori.java?raw=true
+       `wget https://raw.githubusercontent.com/kh4l1d/CL1-Codes/master/travellingSalesman.cpp`
        
-       wget -O lexicalAnalyzer.l https://github.com/kh4l1d/CL1-Codes/Lexical Analyzer/lexicalAnalyzer.l?raw=true
 
-2. It's of the form ->
+2. It's of the form: 
 
-       wget -O filename.txt link/path/to/filename.txt?raw=true
+       `wget URL/file.txt`
 
-3. Although it is worth mentioning that repos should ideally be "git clone"-d like this -> https://www.youtube.com/watch?v=oDUOWC4yib0
+3. Although it is worth mentioning that repos should ideally be "git clone"-d like this: https://www.youtube.com/watch?v=oDUOWC4yib0
 
 --------------------------------------------------------------------------------------------------------------------------------
 ### travellingSalesman.cpp
