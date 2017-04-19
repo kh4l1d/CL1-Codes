@@ -1,5 +1,5 @@
 # CL1-Codes
-An attempt to simplify codes as much as possible.
+Instructions and solutions to common issues (please read) ->
 --------------------------------------------------------------------------------------------------------------------------------
 
 ### Downloading :wink:
