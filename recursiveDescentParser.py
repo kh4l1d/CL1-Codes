@@ -17,13 +17,10 @@ p=0
 flag=True
 
 def E():
-	global p
-	if(string[p]=='i'):
-		match('i')
-		Ed()
+	match('i')
+	Ed()
 
 def Ed():
-	global p
 	if(string[p]=='+'):
 		match('+')
 		match('i')
@@ -32,8 +29,6 @@ def Ed():
 		return
 
 def match(t):
-	global p
-	global flag
 	if(string[p]==t):
 		p+=1
 	else:
